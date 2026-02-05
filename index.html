@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визовый центр | Оформление виз</title>
+    <meta name="description"
+        content="Визовый центр. Профессиональная помощь в оформлении виз, консультации и поддержка.">
+    <!-- Google Fonts for Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Lenis for Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Mobile Header (Visible only on small screens) -->
+    <header class="mobile-header">
+        <div class="logo">ВИЗОВЫЙ ЦЕНТР</div>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <!-- Sidebar Navigation (Desktop) / Drawer (Mobile) -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo-text">
+                <i class="fa-solid fa-passport"></i>
+                <span>ВИЗАХОД</span>
+            </a>
+            <button class="close-menu" aria-label="Close menu">&times;</button>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#hero" class="active" data-section="hero">ГЛАВНАЯ</a></li>
+            <li><a href="#about" data-section="about">О НАС</a></li>
+            <li><a href="#faq" data-section="faq">FAQ</a></li>
+            <li><a href="#feedbacks" data-section="feedbacks">ОТЗЫВЫ</a></li>
+            <li><a href="#contacts" data-section="contacts">КОНТАКТЫ</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <div class="contact-mini">
+                <p>Бишкек, Кыргызстан</p>
+                <p>+996 555 653-7203</p>
+            </div>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#"><i class="fa-brands fa-vk"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-overlay"></div>
+            <!-- Background Image handled in CSS -->
+
+            <div class="hero-content fade-in-up">
+                <div class="subtitle">ВИЗОВОЕ АГЕНТСТВО</div>
+                <h1 class="headline">ОТКРОЙТЕ МИР <br> БЕЗ ГРАНИЦ</h1>
+                <p class="hero-description">
+                    Профессиональная помощь в получении виз в США, Европу и Азию.
+                    Минимальные сроки, гарантия качества и полное сопровождение.
+                </p>
+                <div class="cta-wrapper">
+                    <a href="#contacts" class="btn btn-primary">ОСТАВИТЬ ЗАЯВКУ</a>
+                    <a href="#about" class="btn btn-outline">ПОДРОБНЕЕ</a>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item fade-in-delay-1">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Лет опыта</span>
+                </div>
+                <div class="stat-item fade-in-delay-2">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Одобрений</span>
+                </div>
+                <div class="stat-item fade-in-delay-3">
+                    <span class="stat-number">5.0</span>
+                    <span class="stat-label">Рейтинг</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">ПОЧЕМУ МЫ</span>
+                    <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card scroll-reveal delay-1">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+                        <h3>Гарантия результата</h3>
+                        <p>Мы тщательно проверяем документы, чтобы исключить риск отказа.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card scroll-reveal delay-2">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3>Сжатые сроки</h3>
+                        <p>Оформление документов в кратчайшие сроки, даже в сложных случаях.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card scroll-reveal delay-3">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3>Поддержка 24/7</h3>
+                        <p>Персональный менеджер на связи с вами на всех этапах оформления.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ / GALLERY SECTION -->
+        <section id="faq" class="section faq-section light-bg">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">ИНФОРМАЦИЯ</span>
+                    <h2>ЧАСТЫЕ ВОПРОСЫ</h2>
+                </div>
+
+                <div class="faq-gallery-grid">
+                    <!-- Item 1 -->
+                    <div class="gallery-item scroll-reveal">
+                        <!-- Using relevant placeholder images -->
+                        <img src="https://images.unsplash.com/photo-1520106212299-d99c443e4568?q=80&w=1000&auto=format&fit=crop"
+                            alt="Visa Documents" class="gallery-img">
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h3>Какие документы нужны?</h3>
+                                <p>Загранпаспорт, фото, справка с работы и выписка из банка.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="gallery-item scroll-reveal delay-1">
+                        <img src="https://images.unsplash.com/photo-1503220317375-aaad6143d41b?q=80&w=1000&auto=format&fit=crop"
+                            alt="Travel" class="gallery-img">
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h3>Сколько ждать визу?</h3>
+                                <p>Сроки зависят от страны, обычно от 3 до 14 рабочих дней.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="gallery-item scroll-reveal delay-2">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1000&auto=format&fit=crop"
+                            alt="Airplane" class="gallery-img">
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h3>Работаете с отказами?</h3>
+                                <p>Да, мы помогаем подготовить апелляцию и повторную подачу.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEEDBACKS SECTION -->
+        <section id="feedbacks" class="section feedback-section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">ОТЗЫВЫ</span>
+                    <h2>ЧТО ГОВОРЯТ КЛИЕНТЫ</h2>
+                </div>
+
+                <div class="feedback-slider-wrapper scroll-reveal">
+                    <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+
+                    <div class="feedback-slider">
+                        <!-- Review 1 -->
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="https://placehold.co/60x60/333/FFF?text=AL" alt="User 1" class="avatar">
+                                <div>
+                                    <h4>Анна Ларина</h4>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="review-text">"Получила визу в США с первого раза! Огромное спасибо за подготовку к
+                                собеседованию."</p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="https://placehold.co/60x60/333/FFF?text=MJ" alt="User 2" class="avatar">
+                                <div>
+                                    <h4>Михаил Юрьев</h4>
+                                    <div class="stars">★★★★☆</div>
+                                </div>
+                            </div>
+                            <p class="review-text">"Оформляли шенген на всю семью. Быстро, четко, без лишних нервов."
+                            </p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="https://placehold.co/60x60/333/FFF?text=SK" alt="User 3" class="avatar">
+                                <div>
+                                    <h4>Светлана К.</h4>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="review-text">"Очень вежливые сотрудники. Помогли собрать сложный пакет документов
+                                для Великобритании."</p>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="review-card">
+                            <div class="user-info">
+                                <img src="https://placehold.co/60x60/333/FFF?text=DR" alt="User 4" class="avatar">
+                                <div>
+                                    <h4>Дмитрий Романов</h4>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                            </div>
+                            <p class="review-text">"Рекомендую! Сделали визу в Китай за неделю. Цены адекватные."</p>
+                        </div>
+                    </div>
+
+                    <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contacts" class="section contact-section">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-info scroll-reveal">
+                        <span class="section-tag">КОНТАКТЫ</span>
+                        <h2>ОСТАВИТЬ ЗАЯВКУ</h2>
+                        <p>Есть вопросы? Заполните форму, и мы свяжемся с вами в течение 15 минут.</p>
+
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>г. Бишкек, ул. Моссковская 999</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>info@visacenter.kg</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+996 555 653-7203</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper scroll-reveal delay-1">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" required placeholder=" ">
+                                <label for="name">Ваше Имя</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" required placeholder=" ">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="subject">
+                                    <option value="consultation">Консультация</option>
+                                    <option value="usa">Виза в США</option>
+                                    <option value="schengen">Шенгенская виза</option>
+                                    <option value="asia">Виза в Азию</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" rows="4" required placeholder=" "></textarea>
+                                <label for="message">Сообщение</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span>ОТПРАВИТЬ</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="main-footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <h3>ВИЗОВЫЙ ЦЕНТР</h3>
+                    <p>&copy; 2026 Все права защищены.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Договор оферты</a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
