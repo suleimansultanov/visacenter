@@ -3,9 +3,9 @@
    ========================================= */
 :root {
     /* Colors */
-    --primary-color: #FFD700;
-    /* Gold/Yellow from reference */
-    --primary-hover: #e5c100;
+    --primary-color: #6ceae8;
+    /* Cyan/Teal from request */
+    --primary-hover: #5bcbc9;
     --dark-bg: #1a1a1a;
     --darker-bg: #111111;
     --light-text: #ffffff;
@@ -946,9 +946,9 @@ img {
     background-color: #fff;
 }
 
-/* Make "Anketa" slightly distinctive lighter yellow as requested */
+/* Make "Anketa" slightly distinctive lighter teal as requested */
 .nav-item-yellow:nth-child(2) {
-    background-color: #ffe033;
+    background-color: #92efed;
 }
 
 .nav-item-yellow:nth-child(2):hover {
