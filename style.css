@@ -833,6 +833,13 @@ img {
     /* Hide Sidebar */
     .mobile-header {
         display: flex;
+        justify-content: flex-end;
+        /* Align hamburger to the right */
+    }
+
+    .mobile-header .logo {
+        display: none;
+        /* Hide logo/text in mobile view */
     }
 
     /* Show Mobile Header */
@@ -863,7 +870,7 @@ img {
         border: none;
         font-size: 2rem;
         cursor: pointer;
-        margin-left: 30px;
+        margin-left: 80px;
         /* Left margin from logo */
         margin-top: 5px;
         /* Top margin */
