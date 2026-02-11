@@ -565,7 +565,7 @@ img {
 /* Safari/Chrome */
 
 .review-card {
-    min-width: 350px;
+    min-width: 280px;
     background: #222;
     padding: 30px;
     border-radius: 4px;
@@ -863,6 +863,16 @@ img {
         border: none;
         font-size: 2rem;
         cursor: pointer;
+        margin-left: 30px;
+        /* Left margin from logo */
+        margin-top: 5px;
+        /* Top margin */
+    }
+
+    .sidebar-header {
+        justify-content: flex-start;
+        /* Align start to use fixed margin */
+        width: 100%;
     }
 
     .hero-section {
@@ -918,6 +928,26 @@ img {
 
     .footer-links a {
         margin: 0 10px;
+    }
+
+    /* Hide slider buttons on mobile */
+    .slider-btn {
+        display: none;
+    }
+
+    /* Adjust review card for mobile */
+    .review-card {
+        min-width: 85vw;
+        /* Almost full width */
+        scroll-snap-align: center;
+        /* Center the card when snapping */
+    }
+
+    /* Adjust history image for mobile */
+    .history-img-small {
+        width: 85vw;
+        /* Consistent with review card */
+        max-width: 300px;
     }
 }
 
@@ -1073,6 +1103,7 @@ img {
 
 .history-img-small {
     width: 250px;
+    max-width: 80vw;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
