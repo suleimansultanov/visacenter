@@ -79,7 +79,8 @@ img {
 .sidebar-header {
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    padding-right: 10px;
 }
 
 .logo-text {
@@ -1027,7 +1028,7 @@ img {
 }
 
 /* Responsive adjustments for Top Nav */
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
     .top-nav {
         display: none;
         /* Hide on mobile/tablet or adjust */
@@ -1172,7 +1173,9 @@ img {
 .whatsapp-float:hover {
     transform: scale(1.1);
     color: #FFF;
-}/* =========================================
+}
+
+/* =========================================
    FAQ ACCORDION
    ========================================= */
 .faq-container {
