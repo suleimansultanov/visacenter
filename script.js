@@ -106,6 +106,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* =========================================
+       3.1. HISTORY SLIDER
+       ========================================= */
+    const historySlider = document.querySelector('.history-slider');
+    const historyPrev = document.querySelector('.history-prev');
+    const historyNext = document.querySelector('.history-next');
+
+    if (historySlider && historyPrev && historyNext) {
+        historyNext.addEventListener('click', () => {
+            historySlider.scrollBy({ left: 270, behavior: 'smooth' }); // 250px img + 20px gap
+        });
+
+        historyPrev.addEventListener('click', () => {
+            historySlider.scrollBy({ left: -270, behavior: 'smooth' });
+        });
+    }
+
+    /* =========================================
        4. CONTACT FORM VALIDATION
        ========================================= */
     const contactForm = document.getElementById('contactForm');
@@ -191,5 +208,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
+    /* =========================================
+       6. LIGHTBOX FUNCTIONALITY
+       ========================================= */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const historyImages = document.querySelectorAll('.history-img-small');
+
+    if (lightbox && lightboxImg && closeBtn) {
+        // Open Lightbox
+        historyImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+                // Disable background scrolling
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close Lightbox
+        const closeLightbox = () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        };
+
+        closeBtn.addEventListener('click', closeLightbox);
+
+        // Close on outside click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                closeLightbox();
+            }
+        });
+    }
 
 });

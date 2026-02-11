@@ -71,20 +71,33 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px 30px;
+    padding: 20px 30px 40px 30px;
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
     transition: transform var(--transition-fast);
 }
 
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
 .logo-text {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 2rem;
+    /* Increased font size */
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-left: 20px;
-    margin-top: 35px;
+    margin: 0;
+    /* Removed specific margins to center */
+}
+
+.logo-text img {
+    height: 60px !important;
+    /* Force bigger logo height */
+    margin-right: 10px;
 }
 
 .nav-links {
@@ -580,19 +593,31 @@ img {
 
 .review-text {
     font-style: italic;
-    color: #ccc;
-    line-height: 1.6;
+    transition: all var(--transition-fast);
 }
 
 .slider-btn {
-    background: #333;
-    border: none;
-    color: var(--white);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    /* Prevent squishing */
+    min-height: 50px;
     border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: var(--transition-fast);
+    font-size: 1.2rem;
+    padding: 0;
+    /* Remove default button padding */
+    margin: 0;
+    line-height: 1;
+    aspect-ratio: 1;
+    /* Force square aspect ratio */
+    transition: all var(--transition-fast);
 }
 
 .slider-btn:hover {
@@ -1007,4 +1032,144 @@ img {
         display: none;
         /* Hide on mobile/tablet or adjust */
     }
+}
+
+/* =========================================
+   HISTORY SECTION (SLIDER)
+   ========================================= */
+.history-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.history-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+    padding: 10px 0;
+    width: 100%;
+}
+
+.history-slider::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.history-slide {
+    flex: 0 0 auto;
+    transition: transform var(--transition-fast);
+}
+
+.history-slide:hover {
+    transform: translateY(-5px);
+}
+
+.history-img-small {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.history-img-small:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   LIGHTBOX STYLES
+   ========================================= */
+.lightbox-overlay {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s;
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    animation: zoomIn 0.3s;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: var(--primary-yellow);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   FIXED WHATSAPP BUTTON
+   ========================================= */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #FFF;
 }
