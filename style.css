@@ -1172,4 +1172,76 @@ img {
 .whatsapp-float:hover {
     transform: scale(1.1);
     color: #FFF;
+}/* =========================================
+   FAQ ACCORDION
+   ========================================= */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--darker-bg);
+    /* Match site theme */
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: border-color var(--transition-fast);
+}
+
+.faq-item:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.faq-question {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.faq-question:hover {
+    color: var(--primary-color);
+}
+
+.faq-question i {
+    font-size: 0.9rem;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+    color: var(--gray-text);
+}
+
+.faq-item.active .faq-question {
+    color: var(--primary-color);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    color: var(--primary-color);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.faq-answer p {
+    padding: 0 25px 25px 25px;
+    color: var(--gray-text);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
 }
